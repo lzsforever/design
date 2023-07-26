@@ -1,11 +1,10 @@
 package creationalpattern.factory.old;
 
-import com.alibaba.fastjson.JSON;
 import creationalpattern.factory.entity.AwardReq;
 import creationalpattern.factory.entity.AwardRes;
-import creationalpattern.factory.service.CouponService;
-import creationalpattern.factory.service.GoodsService;
-import creationalpattern.factory.service.IQiYiCardService;
+import creationalpattern.factory.old.service.CouponService;
+import creationalpattern.factory.old.service.GoodsService;
+import creationalpattern.factory.old.service.IQiYiCardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,8 +15,8 @@ import org.slf4j.LoggerFactory;
  * @description: 通过ifelse实现奖品分发
  * @create: 2023/07/26 15:59
  **/
-public class oldPrizeController {
-    private Logger logger = LoggerFactory.getLogger(oldPrizeController.class);
+public class OldPrizeController {
+    private Logger logger = LoggerFactory.getLogger(OldPrizeController.class);
 
     public AwardRes awardToUser(AwardReq req) {
         AwardRes awardRes = null;
