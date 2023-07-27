@@ -1,8 +1,8 @@
-package creationalpattern.factory.simpleFacotory;
+package creationalpattern.factory.simplefactory;
 
-import creationalpattern.factory.simpleFacotory.service.CouponCommodityService;
-import creationalpattern.factory.simpleFacotory.service.GoodsCommodityService;
-import creationalpattern.factory.simpleFacotory.service.IQiYiCardCommodityService;
+import creationalpattern.factory.simplefactory.service.CouponCommodityService;
+import creationalpattern.factory.simplefactory.service.GoodsCommodityService;
+import creationalpattern.factory.simplefactory.service.IQiYiCardCommodityService;
 
 /**
  * @version 1.0.0
@@ -12,7 +12,8 @@ import creationalpattern.factory.simpleFacotory.service.IQiYiCardCommodityServic
  * @create: 2023/07/26 18:52
  **/
 public class SimpleFactory {
-    public ICommodity getCommodityService(Integer commodityType) {
+    //发送不同类型奖品
+    public IAbstractCommodity getCommodityService(Integer commodityType) {
         if (null == commodityType) return null;
         if (1 == commodityType) return new CouponCommodityService();
         if (2 == commodityType) return new GoodsCommodityService();
